@@ -1,0 +1,37 @@
+<div id="page-container">
+  <div id="page-header">
+    <div id="logo-header">
+      <img src="/assets/changebank.svg" alt="Change Bank" width="257" height="55"/>
+      <div class="h-row" *ngIf="isLoggedIn">
+        <p class="header-email" *ngIf="userInfo$ | async as userInfo">
+          {{userInfo.email}}
+        </p>
+        <a class="button-lg" (click)="logout()" style="cursor: pointer">
+          Logout
+        </a>
+      </div>
+      <a class="button-lg" *ngIf="!isLoggedIn" (click)="login()" style="cursor: pointer">
+        Login
+      </a>
+    </div>
+
+    <div id="menu-bar" class="menu-bar">
+      <ng-container *ngIf="isLoggedIn">
+        <a class="menu-link">Make Change</a>
+
+        <a class="menu-link" style="text-decoration-line: underline">Account</a>
+      </ng-container>
+      <ng-container *ngIf="!isLoggedIn">
+        <a class="menu-link">About</a>
+        <a class="menu-link">Services</a>
+        <a class="menu-link">Products</a>
+
+        <a class="menu-link" style="text-decoration-line: underline">Home</a>
+      </ng-container>
+    </div>
+  </div>
+
+  <div style="flex: 1">
+    <router-outlet></router-outlet>
+  </div>
+</div>
