@@ -1,12 +1,15 @@
 import {NgModule} from '@angular/core';
 import {BrowserModule} from '@angular/platform-browser';
-
 import {AppComponent} from './app.component';
 import {RouterModule} from "@angular/router";
 import {HomePageComponent} from './home-page/home-page.component';
+//tag::importAngularSDK[]
 import {FusionAuthModule} from "@fusionauth/angular-sdk";
+//end::importAngularSDK[]
 import {AccountPageComponent} from './account-page/account-page.component';
+//tag::importAuthGuard[]
 import {authGuard} from "./auth-guard";
+//end::importAuthGuard[]
 
 @NgModule({
   declarations: [
