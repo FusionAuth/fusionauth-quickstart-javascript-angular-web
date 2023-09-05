@@ -17,9 +17,8 @@
 
     <div id="menu-bar" class="menu-bar">
       <ng-container *ngIf="isLoggedIn">
-        <a class="menu-link">Make Change</a>
-
-        <a class="menu-link" style="text-decoration-line: underline">Account</a>
+        <a class="menu-link" routerLink="make-change" routerLinkActive="active">Make Change</a>
+        <a class="menu-link" routerLink="account" routerLinkActive="active">Account</a>
       </ng-container>
       <ng-container *ngIf="!isLoggedIn">
         <a class="menu-link">About</a>

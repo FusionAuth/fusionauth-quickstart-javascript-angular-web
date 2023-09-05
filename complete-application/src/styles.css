@@ -72,10 +72,11 @@ body {
   font-weight: 600;
   color: #FFFFFF;
   margin-left: 40px;
+  text-decoration-line: none;
 }
 
-.inactive {
-  text-decoration-line: none;
+.active {
+  text-decoration-line: underline;
 }
 
 .button-lg {
