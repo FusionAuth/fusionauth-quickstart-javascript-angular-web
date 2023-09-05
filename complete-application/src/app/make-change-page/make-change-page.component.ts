@@ -1,7 +1,11 @@
 import { Component } from '@angular/core';
+import {CommonModule} from "@angular/common";
+import {FormsModule} from "@angular/forms";
 
 @Component({
   selector: 'app-make-change-page',
+  standalone: true,
+  imports: [CommonModule, FormsModule],
   templateUrl: './make-change-page.component.html',
   styleUrls: ['./make-change-page.component.css']
 })
