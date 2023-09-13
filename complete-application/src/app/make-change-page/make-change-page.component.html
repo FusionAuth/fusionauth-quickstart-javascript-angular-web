@@ -1,0 +1,15 @@
+<div class="app-container change-container">
+  <h3>We Make Change</h3>
+
+  <div class="change-message" *ngIf="change">
+    We can make change for {{change.total | currency}} with {{change.nickels}} nickels and {{change.pennies}} pennies!
+  </div>
+
+  <form (ngSubmit)="makeChange()">
+    <div class="h-row">
+      <div class="change-label">Amount in USD: $</div>
+      <input class="change-input" name="amount" [(ngModel)]="amount" type="number" step=".01"/>
+      <input class="change-submit" type="submit" value="Make Change"/>
+    </div>
+  </form>
+</div>
