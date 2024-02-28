@@ -17,11 +17,9 @@ export class AppComponent {
 
   constructor() {
     this.isLoggedIn = this.fusionAuthService.isLoggedIn();
-    this.userInfo$ = fromPromise(this.fusionAuthService.getUserInfo());
-
-    this.fusionAuthService.getUserInfo().then(userInfo => {
-      console.log(userInfo);
-    })
+    this.userInfo$ = this.isLoggedIn
+      ? fromPromise(this.fusionAuthService.getUserInfo())
+      : new Observable<UserInfo>();
   }
 
   logout() {
