@@ -35,6 +35,8 @@ You can log into the [FusionAuth admin UI](http://localhost:9011/admin) and look
 
 The `complete-application` directory contains a minimal Angular app configured to authenticate with locally running FusionAuth.
 
+* If you want to use your own server to perform the OAuth token exchange, update the `serverUrl` property of your [config object](https://github.com/FusionAuth/fusionauth-quickstart-javascript-angular-web/blob/main/complete-application/src/app/app.module.ts). See [example server implementation](https://github.com/FusionAuth/fusionauth-javascript-sdk-express).
+
 Install dependencies and run the Angular app with:
 ```
 cd complete-application
