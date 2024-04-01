@@ -16,4 +16,7 @@ export class HomePageComponent {
   login() {
     this.fusionAuthService.startLogin();
   }
+  register() {
+    this.fusionAuthService.startRegistration();
+  }
 }

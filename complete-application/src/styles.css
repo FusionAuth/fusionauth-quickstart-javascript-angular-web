@@ -152,3 +152,12 @@ body {
 .change-container {
   flex: 1;
 }
+
+.button-redirect {
+  background: none;
+  border: none;
+  color: #096324;
+  font-size: 18px;
+  font-family: sans-serif;
+  padding: 0;
+}

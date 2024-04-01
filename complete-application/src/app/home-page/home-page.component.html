@@ -2,7 +2,11 @@
   <div class="content-container">
     <div style="margin-bottom: 100px;">
       <h1>Welcome to Changebank</h1>
-      <p>To get started, <a (click)="login()" style="cursor: pointer">log in or create a new account</a>.</p>
+      <p>To get started,
+        <button class="button-redirect" (click)="login()" style="cursor: pointer">log in</button>
+        or
+        <button class="button-redirect" (click)="register()" style="cursor: pointer">create a new account.</button>
+      </p>
     </div>
   </div>
   <div style="flex: 0;">
