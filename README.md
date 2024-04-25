@@ -56,3 +56,7 @@ Visit https://fusionauth.io/quickstarts/quickstart-javascript-angular-web for a 
 * I get `This site can’t be reached  localhost refused to connect.` when I click the Login button
 
 Ensure FusionAuth is running in the Docker container.  You should be able to login as the admin user, `admin@example.com` with the password of `password` at http://localhost:9011/admin
+
+### Maintaining this repo
+
+> Please note that code snippets from this repository are pulled into [this tutorial](https://fusionauth.io/docs/quickstarts/quickstart-javascript-angular-web) on the fusionauth site. Please consider this when making changes here.
