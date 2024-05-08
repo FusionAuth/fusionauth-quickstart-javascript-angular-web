@@ -1,24 +1,39 @@
 <div id="page-container">
   <div id="page-header">
     <div id="logo-header">
-      <img src="/assets/changebank.svg" alt="Change Bank" width="257" height="55"/>
-      <div class="h-row" *ngIf="isLoggedIn">
-        <p class="header-email" *ngIf="userInfo$ | async as userInfo">
-          {{userInfo.email}}
+      <img
+        src="/assets/changebank.svg"
+        alt="Change Bank"
+        width="257"
+        height="55"
+      />
+
+      @if (isLoggedIn) {
+      <div class="h-row">
+        <p class="header-email">
+          @if (isGettingUserInfo) {
+          {{ "Loading..." }}
+          } @else {
+          {{ userInfo?.email }}
+          }
         </p>
         <a class="button-lg" (click)="logout()" style="cursor: pointer">
           Logout
         </a>
       </div>
-      <a class="button-lg" *ngIf="!isLoggedIn" (click)="login()" style="cursor: pointer">
-        Login
-      </a>
+      } @else {
+      <a class="button-lg" (click)="login()" style="cursor: pointer"> Login </a>
+      }
     </div>
 
     <div id="menu-bar" class="menu-bar">
       <ng-container *ngIf="isLoggedIn">
-        <a class="menu-link" routerLink="make-change" routerLinkActive="active">Make Change</a>
-        <a class="menu-link" routerLink="account" routerLinkActive="active">Account</a>
+        <a class="menu-link" routerLink="make-change" routerLinkActive="active"
+          >Make Change</a
+        >
+        <a class="menu-link" routerLink="account" routerLinkActive="active"
+          >Account</a
+        >
       </ng-container>
       <ng-container *ngIf="!isLoggedIn">
         <a class="menu-link">About</a>
