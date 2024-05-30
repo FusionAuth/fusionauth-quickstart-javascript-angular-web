@@ -1,4 +1,3 @@
-/* You can add global styles to this file, and also import other style files */
 
 h1 {
   color: #096324;
@@ -6,8 +5,9 @@ h1 {
 
 h3 {
   color: #096324;
-  margin-top: 20px;
-  margin-bottom: 40px;
+  font-size: 18px;
+  font-weight: 700;
+  margin-top: 0;
 }
 
 a {
@@ -29,8 +29,8 @@ p {
 
 body {
   font-family: sans-serif;
-  padding: 0px;
-  margin: 0px;
+  padding: 0;
+  margin: 0;
 }
 
 .h-row {
@@ -39,10 +39,7 @@ body {
 }
 
 #page-container {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  height: 100%;
+  overflow: hidden;
 }
 
 #page-header {
@@ -55,24 +52,29 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px;
+  column-gap: 20px;
+  padding: 12px 40px 12px 40px;
 }
 
 .menu-bar {
   display: flex;
-  flex-direction: row-reverse;
+  flex-direction: row;
   align-items: center;
   height: 35px;
   padding: 15px 50px 15px 30px;
   background-color: #096324;
   font-size: 20px;
+  column-gap: 80px;
 }
 
 .menu-link {
   font-weight: 600;
-  color: #FFFFFF;
-  margin-left: 40px;
+  font-size: 20px;
+  font-family: sans-serif;
+  color: #ffffff;
   text-decoration-line: none;
+  background: none;
+  border: none;
 }
 
 .active {
@@ -80,84 +82,144 @@ body {
 }
 
 .button-lg {
-  width: 150px;
-  height: 30px;
+  border: none;
   background-color: #096324;
-  color: #FFFFFF;
-  font-size: 16px;
-  font-weight: 700;
-  border-radius: 10px;
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: 8px;
   text-align: center;
-  padding-top: 10px;
+  padding: 8px 42px 8px 42px;
+  gap: 20px;
   text-decoration-line: none;
+}
+
+.button-redirect {
+  background: none;
+  border: none;
+  font-size: 18px;
+  font-family: sans-serif;
+  color: #096324;
+  margin-top: 20px;
 }
 
 .column-container {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  flex: 1;
+  height: calc(100vh - 144px);
 }
 
 .content-container {
   flex: 1;
   display: flex;
   flex-direction: column;
-  padding: 60px 20px 20px 40px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
 .balance {
-  font-size: 50px;
-  font-weight: 800;
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 32px;
 }
 
 .change-label {
-  font-size: 20px;
-  margin-right: 5px;
+  font-size: 18px;
+  font-weight: 400;
+  margin-bottom: 8px;
 }
 
 .change-input {
-  font-size: 20px;
-  height: 40px;
+  font-size: 18px;
+  font-weight: 400;
+  width: 210px;
+  height: 42px;
+  padding: 10px 22px 10px 22px;
   text-align: end;
-  padding-right: 10px;
+  border-radius: 2px;
+  border-width: 1px;
+  border-color: #000000;
+  box-sizing: border-box;
 }
 
+
 .change-submit {
-  font-size: 15px;
-  height: 40px;
-  margin-left: 15px;
-  border-radius: 5px;
+  border-width: 1px;
+  border-color: #000000;
+  padding: 8px;
+  font-size: 18px;
+  font-weight: 600;
+  height: 42px;
+  margin-left: 20px;
+  border-radius: 8px;
 }
 
 .change-message {
   font-size: 20px;
-  margin-bottom: 15px;
+  margin-top: 8px;
 }
 
 .error-message {
   font-size: 20px;
-  color: #FF0000;
+  color: #ff0000;
   margin-bottom: 15px;
 }
 
 .app-container {
-  flex: 0;
-  min-width: 440px;
   display: flex;
   flex-direction: column;
-  margin-top: 40px;
-  margin-left: 80px;
+  padding: 40px;
 }
 
-.change-container {
+.image-container {
+  display: flex;
   flex: 1;
 }
 
-.button-redirect {
-  background: none;
-  border: none;
-  color: #096324;
-  font-size: 18px;
-  font-family: sans-serif;
-  padding: 0;
+.image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media (max-width: 768px) {
+  .image-container {
+    display: none;
+  }
+  .image-container img {
+    display: none;
+  }
+  .menu-bar {
+    overflow: scroll;
+  }
+  #logo-header {
+    flex-direction: column;
+    justify-content: center;
+    padding: 12px 20px 12px 20px;
+  }
+  .h-row {
+    flex-direction: column;
+  }
+  .header-email {
+    margin-right: 0;
+    margin-top: 0;
+  }
+  .app-container {
+    padding: 24px;
+  }
+}
+
+  @media (max-width: 390px) {
+  .change-container {
+    display: flex;
+    flex: 1;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  .change-submit {
+    margin-left: 0;
+    margin-top: 8px;
+  }
 }
