@@ -2,6 +2,7 @@
   "variables": {
     "allowedOrigin": "http://localhost:4200",
     "authorizedRedirectURL": "http://localhost:4200",
+    "authorizedPostLogoutURL": "http://localhost:4200/logged-out",
     "authorizedOriginURL": "http://localhost:4200",
     "logoutURL": "http://localhost:4200",
     "applicationId": "e9fdb985-9173-4e01-9d73-ac2d60d1dc8e",
@@ -90,6 +91,7 @@
           "name": "Example app",
           "oauthConfiguration": {
             "authorizedRedirectURLs": [
+              "#{authorizedPostLogoutURL}",
               "#{authorizedRedirectURL}"
             ],
             "authorizedOriginURLs": [
