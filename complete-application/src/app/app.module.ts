@@ -24,6 +24,14 @@ import { authGuard } from './auth-guard';
         canActivate: [authGuard(false, '/account')],
       },
       {
+        path: 'logged-out',
+        loadComponent: () =>
+          import('./home-page/home-page.component').then(
+            (m) => m.HomePageComponent
+          ),
+        canActivate: [authGuard(false, '/account')],
+      },
+      {
         path: 'account',
         loadComponent: () =>
           import('./account-page/account-page.component').then(
@@ -46,6 +54,7 @@ import { authGuard } from './auth-guard';
       clientId: 'e9fdb985-9173-4e01-9d73-ac2d60d1dc8e',
       serverUrl: 'http://localhost:9011',
       redirectUri: 'http://localhost:4200',
+      postLogoutRedirectUri: 'http://localhost:4200/logged-out',
       scope: 'openid email profile offline_access',
       shouldAutoRefresh: true,
     }),
