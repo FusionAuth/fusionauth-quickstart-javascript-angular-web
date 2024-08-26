@@ -51,10 +51,10 @@ import { authGuard } from './auth-guard';
     //end::routerConfiguration[]
     //tag::fusionAuthModuleConfiguration[]
     FusionAuthModule.forRoot({
-      clientId: 'e9fdb985-9173-4e01-9d73-ac2d60d1dc8e',
-      serverUrl: 'http://localhost:9011',
-      redirectUri: 'http://localhost:4200',
-      postLogoutRedirectUri: 'http://localhost:4200/logged-out',
+      clientId: "9005c46b-87ff-4e42-893e-2d43ffd3e653",
+      redirectUri: "https://fusionauth-quickstart-javascript-angular-web.cashcat.dev",
+      postLogoutRedirectUri: "https://fusionauth-quickstart-javascript-angular-web.cashcat.dev",
+      serverUrl: "https://auth.cashcat.dev",
       scope: 'openid email profile offline_access',
       shouldAutoRefresh: true,
     }),
@@ -63,4 +63,4 @@ import { authGuard } from './auth-guard';
   providers: [],
   bootstrap: [AppComponent],
 })
-export class AppModule {}
+export class AppModule { }
