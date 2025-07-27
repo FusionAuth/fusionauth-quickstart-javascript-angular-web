@@ -51,7 +51,7 @@ import { authGuard } from './auth-guard';
     //end::routerConfiguration[]
     //tag::fusionAuthModuleConfiguration[]
     FusionAuthModule.forRoot({
-      clientId: "9005c46b-87ff-4e42-893e-2d43ffd3e653",
+      clientId: "03275d5c-7f5e-4862-99ba-b8217247047f",
       redirectUri: "https://fusionauth-quickstart-javascript-angular-web.cashcat.dev",
       postLogoutRedirectUri: "https://fusionauth-quickstart-javascript-angular-web.cashcat.dev",
       serverUrl: "https://auth.cashcat.dev",
