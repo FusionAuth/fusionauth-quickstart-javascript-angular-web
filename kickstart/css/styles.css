@@ -33,7 +33,7 @@ body {
 /* Changes for Powered by FusionAuth div */
 body > main main.page-body {
   min-height: calc(100vh - 3rem); /* to make the Powered by FusionAuth div position at the bottom of the page if the page is shorter than the viewport */
-  padding-top: 5rem;
+  padding-top: 3rem;
 }
 body > main {
   padding-bottom: 2.5rem; /* giving Powered by FusionAuth more space */
@@ -44,15 +44,10 @@ body > main {
 /* End Powered by FusionAuth */
 
 
-/* Uncomment following to hide help bar at top */
-/*
+/* Hiding help bar at top */
 body > main {
   padding-top: 0;
 }
-body > main header.app-header {
-  display: none;
-}
-*/
 /* end help bar */
 
 
@@ -186,7 +181,7 @@ input[type="url"],
 input[type="password"],
 textarea,
 label.select select
- {
+{
   background: var(--input-background);
   border: 1px solid var(--border-color) !important;
   border-radius: .25rem !important;
