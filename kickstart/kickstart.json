@@ -53,6 +53,9 @@
             "debug": false,
             "enabled": true,
             "preflightMaxAgeInSeconds": 0
+          },
+          "usageDataConfiguration": {
+            "enabled": true
           }
         }
       }
@@ -194,7 +197,7 @@
             "registrationVerificationRequired": "@{templates/registrationVerificationRequired.ftl}",
             "registrationVerify": "@{templates/registrationVerify.ftl}",
             "samlv2Logout": "@{templates/samlv2Logout.ftl}",
-            "unauthorized" : "@{templates/unauthorized.ftl}"
+            "unauthorized": "@{templates/unauthorized.ftl}"
           }
         }
       }
