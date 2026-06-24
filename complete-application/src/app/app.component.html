@@ -27,20 +27,15 @@
     </div>
 
     <div id="menu-bar" class="menu-bar">
-      <ng-container *ngIf="isLoggedIn">
-        <a class="menu-link" routerLink="account" routerLinkActive="active"
-          >Account</a
-        >
-        <a class="menu-link" routerLink="make-change" routerLinkActive="active"
-          >Make Change</a
-        >
-      </ng-container>
-      <ng-container *ngIf="!isLoggedIn">
+      @if (isLoggedIn) {
+        <a class="menu-link" routerLink="account" routerLinkActive="active">Account</a>
+        <a class="menu-link" routerLink="make-change" routerLinkActive="active">Make Change</a>
+      } @else {
         <a class="menu-link" style="text-decoration-line: underline">Home</a>
         <a class="menu-link">Products</a>
         <a class="menu-link">Services</a>
         <a class="menu-link">About</a>
-      </ng-container>
+      }
     </div>
   </div>
 
