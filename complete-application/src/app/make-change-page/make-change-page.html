@@ -7,9 +7,7 @@
       <input class="change-submit" type="submit" value="Make Change"/>
   </form>
 
-  @if (change) {
-  <div class="change-message">
+  <div class="change-message" *ngIf="change">
     We can make change for {{change.total | currency}} with {{change.nickels}} nickels and {{change.pennies}} pennies!
   </div>
-  }
 </div>

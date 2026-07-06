@@ -5,10 +5,10 @@ import {CommonModule} from "@angular/common";
   selector: 'app-account-page',
   standalone: true,
   imports: [CommonModule],
-  templateUrl: './account-page.component.html',
-  styleUrls: ['./account-page.component.css']
+  templateUrl: './account-page.html',
+  styleUrls: ['./account-page.css']
 })
-export class AccountPageComponent {
+export class AccountPage {
 
   balance = Math.ceil(Math.random() * 100000) / 100;
 

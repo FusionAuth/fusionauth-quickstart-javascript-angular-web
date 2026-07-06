@@ -5,10 +5,10 @@ import { Subscription } from 'rxjs';
 @Component({
   standalone: false,
   selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css'],
+  templateUrl: './app.html',
+  styleUrls: ['./app.css'],
 })
-export class AppComponent implements OnInit, OnDestroy {
+export class App implements OnInit, OnDestroy {
   private fusionAuthService: FusionAuthService = inject(FusionAuthService);
 
   isLoggedIn: boolean = this.fusionAuthService.isLoggedIn();

@@ -6,10 +6,10 @@ import { CommonModule } from '@angular/common';
   selector: 'app-home-page',
   standalone: true,
   imports: [CommonModule],
-  templateUrl: './home-page.component.html',
-  styleUrls: ['./home-page.component.css'],
+  templateUrl: './home-page.html',
+  styleUrls: ['./home-page.css'],
 })
-export class HomePageComponent {
+export class HomePage {
   private fusionAuthService = inject(FusionAuthService);
 
   login() {
