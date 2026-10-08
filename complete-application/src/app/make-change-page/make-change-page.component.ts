@@ -16,10 +16,11 @@ export class MakeChangePageComponent {
   change: { total: number; nickels: number; pennies: number } | null = null;
 
   makeChange() {
-    const total = this.amount;
-    const nickels = Math.floor(this.amount / 0.05);
-    const pennies = Math.round((this.amount - nickels * 0.05) * 100);
-    this.change = {nickels, pennies, total};
+    // work in whole cents so floating-point rounding can't drop a penny
+    const cents = Math.round(this.amount * 100);
+    const nickels = Math.floor(cents / 5);
+    const pennies = cents % 5;
+    this.change = {nickels, pennies, total: cents / 100};
   }
 
 }
